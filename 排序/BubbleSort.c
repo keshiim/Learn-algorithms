@@ -19,7 +19,7 @@ void swap(SqList *L, int i, int j) {
 /*
  时间复杂度分析；
    sort2最好的情况是O(n)
-        最差的情况是O(n) sigma(i=2, n, i-1) = 1+2+3+...+(n-1) = n(n-1)/2
+        最差的情况是O(n^2) sigma(i=2, n, i-1) = 1+2+3+...+(n-1) = n(n-1)/2
  */
 //对顺序表L做交换排序（冒泡排序初级版）
 void BubbleSort0(SqList *L) {
