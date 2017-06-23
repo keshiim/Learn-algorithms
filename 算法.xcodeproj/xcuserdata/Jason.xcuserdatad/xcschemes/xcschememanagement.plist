@@ -6,18 +6,31 @@
 	<dict>
 		<key>MaximumSubarray.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
 		<key>二叉树.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
 		<key>图.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>4</integer>
+		</dict>
+		<key>排序.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>查找.xcscheme</key>
 		<dict>
@@ -26,11 +39,15 @@
 		</dict>
 		<key>算法.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
 		<key>线索二叉树.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
@@ -57,12 +74,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>96A0A3BC1EFCC617007B33E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>96A2B9F81EC2E88600AE0312</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>96A2BA061EC2E8C300AE0312</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>96EB874F1EFCBC5600C6C3A6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
