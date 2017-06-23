@@ -6,6 +6,8 @@
 //  Copyright © 2017年 Jason. All rights reserved.
 //
 
+/* 平衡二叉树 - AVL树
+   时间复杂度：查找 = 插入 = 删除 = O(log n)*/
 #include "平衡二叉树.h"
 #include <stdlib.h>
 
