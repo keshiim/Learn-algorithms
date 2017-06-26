@@ -7,6 +7,7 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "StructHeader.h"
 
 /* 将有序的SR[i..m]和SR[m+1..n]归并为有序的TR[i..n] */
@@ -62,3 +63,67 @@ void MSort(int SR[], int TR1[], int s, int t) {
 void MergeSort(SqList *L) {
     MSort(L->r, L->r, 1, L->length);
 }
+
+
+
+#pragma mark - 归并排序优化，非递归方式
+//将SR[]中相邻长度为s的子序列两两归并到TR[]
+void MergePass(int SR[], int TR[], int s, int n) {
+    int i = 1;
+    int j;
+    while (i <= n - 2 * s + 1) {
+        //两两归并
+        Merge(SR, TR, i, i + s - 1, i + 2 * s -1);
+        i = i + 2 * s;
+    }
+    //归并最后两个序列
+    if (i < n - s + 1) {
+        Merge(SR, TR, i, i + s - 1, n);
+    } else {
+        for (j = i; j <= n; j++) {
+            TR[j] = SR[j];
+        }
+    }
+}
+
+
+/* 算法的时间复杂度：O(nlogn)
+   空间复杂度：O(n)
+   对顺序表L作归并非递归排序
+ */
+void MergeSort2(SqList *L) {
+    //申请额外空间
+    int *TR = (int *)malloc(L->length * sizeof(int));
+    int k = 1;
+    while (k < L->length) {
+        MergePass(L->r, TR, k, L->length);
+        //子序列长度加倍
+        k = 2 * k;
+        MergePass(TR, L->r, k, L->length);
+        //子序列长度加倍
+        k = 2 * k;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
