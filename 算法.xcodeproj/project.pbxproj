@@ -22,6 +22,7 @@
 		96A0A3C61EFCF22E007B33E5 /* SelectSort.c in Sources */ = {isa = PBXBuildFile; fileRef = 96A0A3C51EFCF22E007B33E5 /* SelectSort.c */; };
 		96A0A3C81EFCFC6C007B33E5 /* InsertSort.c in Sources */ = {isa = PBXBuildFile; fileRef = 96A0A3C71EFCFC6C007B33E5 /* InsertSort.c */; };
 		96A0A3CA1EFD1FCF007B33E5 /* ShellSort.c in Sources */ = {isa = PBXBuildFile; fileRef = 96A0A3C91EFD1FCF007B33E5 /* ShellSort.c */; };
+		96A0A3CC1F00E370007B33E5 /* HeapSort.c in Sources */ = {isa = PBXBuildFile; fileRef = 96A0A3CB1F00E370007B33E5 /* HeapSort.c */; };
 		96A2B9FD1EC2E88600AE0312 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2B9FC1EC2E88600AE0312 /* main.m */; };
 		96A2BA0A1EC2E8C300AE0312 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 96A2BA091EC2E8C300AE0312 /* main.c */; };
 		96EB87531EFCBC5700C6C3A6 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 96EB87521EFCBC5700C6C3A6 /* main.c */; };
@@ -123,6 +124,7 @@
 		96A0A3C51EFCF22E007B33E5 /* SelectSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SelectSort.c; sourceTree = "<group>"; };
 		96A0A3C71EFCFC6C007B33E5 /* InsertSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = InsertSort.c; sourceTree = "<group>"; };
 		96A0A3C91EFD1FCF007B33E5 /* ShellSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ShellSort.c; sourceTree = "<group>"; };
+		96A0A3CB1F00E370007B33E5 /* HeapSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HeapSort.c; sourceTree = "<group>"; };
 		96A2B9F91EC2E88600AE0312 /* 算法 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "算法"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A2B9FC1EC2E88600AE0312 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96A2BA071EC2E8C300AE0312 /* MaximumSubarray */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MaximumSubarray; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,6 +297,7 @@
 				96A0A3C51EFCF22E007B33E5 /* SelectSort.c */,
 				96A0A3C71EFCFC6C007B33E5 /* InsertSort.c */,
 				96A0A3C91EFD1FCF007B33E5 /* ShellSort.c */,
+				96A0A3CB1F00E370007B33E5 /* HeapSort.c */,
 			);
 			path = "排序";
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96EB87531EFCBC5700C6C3A6 /* main.c in Sources */,
+				96A0A3CC1F00E370007B33E5 /* HeapSort.c in Sources */,
 				96A0A3C61EFCF22E007B33E5 /* SelectSort.c in Sources */,
 				96A0A3CA1EFD1FCF007B33E5 /* ShellSort.c in Sources */,
 				96A0A3C81EFCFC6C007B33E5 /* InsertSort.c in Sources */,

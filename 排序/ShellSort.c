@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include "StructHeader.h"
 
-
+/* 时间复杂度分析：O(n^3/2) */
 //对顺序表L作希尔排序
 void ShellSort(SqList *L) {
     int i, j;
