@@ -9,6 +9,8 @@
 #include <stdio.h>
 #include "StructHeader.h"
 
+void InsertSort(SqList *L);
+
 /* 交换顺序表L中子表的记录，是枢轴记录到位，并返回其所在的位置 
    此时在它之前（后）的记录均不大（小）于它。*/
 int Partition(SqList *L, int low, int high) {
@@ -131,7 +133,7 @@ void QSort(SqList *L, int low, int high) {
 }
 
 #define MAX_LENGTH_INSERT_SORT 7 //数组长度阈值
-/* 对顺序表L中的子序列L.r[low..high]作快速排序 */
+/* 优化算法：对顺序表L中的子序列L.r[low..high]作快速排序 */
 void QSort1(SqList *L, int low, int high) {
     int pivot;
     if ((high - low) > MAX_LENGTH_INSERT_SORT) {
@@ -144,6 +146,24 @@ void QSort1(SqList *L, int low, int high) {
         QSort1(L, pivot + 1, high);
     } else {
         //当high-low小于等于常数时用直接插入排序
+        InsertSort(L);
+    }
+}
+
+/* 优化快排：采用迭代代替递归方法可以缩减对战深度，提高整体性能
+ 对顺序表L中的子序列L.r[low..high]作快速排序 */
+void QSort2(SqList *L, int low, int high) {
+    int pivot;
+    if ((high - low) > MAX_LENGTH_INSERT_SORT) {
+        while (low < high) {
+            //L.r[low..high]一分为二，算出枢轴值
+            pivot = Partition2(L, low, high);
+            //对低子表递归排序
+            QSort2(L, low, pivot - 1);
+            //尾递归
+            low = pivot + 1;
+        }
+    } else {
         InsertSort(L);
     }
 }
