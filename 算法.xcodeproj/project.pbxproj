@@ -11,6 +11,7 @@
 		9610007A1EE80FE60026A30A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 961000791EE80FE60026A30A /* main.c */; };
 		961000851EE965C50026A30A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 961000841EE965C50026A30A /* main.c */; };
 		9610008A1EEA5E960026A30A /* KMP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 961000891EEA5E960026A30A /* KMP.cpp */; };
+		961A03C01F0200A400482DF4 /* QuickSort.c in Sources */ = {isa = PBXBuildFile; fileRef = 961A03BF1F0200A400482DF4 /* QuickSort.c */; };
 		96412C861EFBBAE0002DF237 /* 散列表查找.c in Sources */ = {isa = PBXBuildFile; fileRef = 96412C841EFBBAE0002DF237 /* 散列表查找.c */; };
 		9667952B1EF79A790031DAE9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9667952A1EF79A790031DAE9 /* main.c */; };
 		966795311EF79A9A0031DAE9 /* 顺序查找.c in Sources */ = {isa = PBXBuildFile; fileRef = 9667952F1EF79A9A0031DAE9 /* 顺序查找.c */; };
@@ -105,6 +106,7 @@
 		961000821EE965C50026A30A /* 图 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "图"; sourceTree = BUILT_PRODUCTS_DIR; };
 		961000841EE965C50026A30A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		961000891EEA5E960026A30A /* KMP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KMP.cpp; path = ../KMP.cpp; sourceTree = "<group>"; };
+		961A03BF1F0200A400482DF4 /* QuickSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = QuickSort.c; sourceTree = "<group>"; };
 		96412C841EFBBAE0002DF237 /* 散列表查找.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "散列表查找.c"; sourceTree = "<group>"; };
 		96412C851EFBBAE0002DF237 /* 散列表查找.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "散列表查找.h"; sourceTree = "<group>"; };
 		966795281EF79A780031DAE9 /* 查找 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "查找"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -301,6 +303,7 @@
 				96A0A3C91EFD1FCF007B33E5 /* ShellSort.c */,
 				96A0A3CB1F00E370007B33E5 /* HeapSort.c */,
 				96A0A3CD1F00F013007B33E5 /* MergingSort.c */,
+				961A03BF1F0200A400482DF4 /* QuickSort.c */,
 			);
 			path = "排序";
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96EB87531EFCBC5700C6C3A6 /* main.c in Sources */,
+				961A03C01F0200A400482DF4 /* QuickSort.c in Sources */,
 				96A0A3CC1F00E370007B33E5 /* HeapSort.c in Sources */,
 				96A0A3C61EFCF22E007B33E5 /* SelectSort.c in Sources */,
 				96A0A3CE1F00F013007B33E5 /* MergingSort.c in Sources */,
