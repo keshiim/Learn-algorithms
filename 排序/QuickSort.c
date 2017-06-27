@@ -130,6 +130,24 @@ void QSort(SqList *L, int low, int high) {
     }
 }
 
+#define MAX_LENGTH_INSERT_SORT 7 //数组长度阈值
+/* 对顺序表L中的子序列L.r[low..high]作快速排序 */
+void QSort1(SqList *L, int low, int high) {
+    int pivot;
+    if ((high - low) > MAX_LENGTH_INSERT_SORT) {
+        //当high - low大于常数时用快速排序
+        //将L.r[low..high]一分为二，并算出枢轴值pivot
+        pivot = Partition(L, low, high);
+        //对低子表递归排序
+        QSort1(L, low, pivot - 1);
+        //对高子表递归排序
+        QSort1(L, pivot + 1, high);
+    } else {
+        //当high-low小于等于常数时用直接插入排序
+        InsertSort(L);
+    }
+}
+
 /* 时间复杂度：O(nlogn)
    空间复杂度：O(logn) */
 /* 对顺序表L作快速排序 */
