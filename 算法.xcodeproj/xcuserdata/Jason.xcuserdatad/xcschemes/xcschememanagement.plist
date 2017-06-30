@@ -11,6 +11,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>cpp绪论.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>二叉树.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -70,6 +75,11 @@
 			<true/>
 		</dict>
 		<key>966795271EF79A780031DAE9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>96731AFD1F06277200A8339D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
