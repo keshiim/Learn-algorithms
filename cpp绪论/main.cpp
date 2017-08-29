@@ -15,7 +15,7 @@ void bubblesort1A(int A[], int n) {
         sorted = true;//假定已排好序
         for (int i = 1; i < n; i++) {
             if (A[i - 1] > A[i]) {
-                swap(A[i - 1], A[i]);
+                std::swap(A[i - 1], A[i]);
                 sorted = false;
             }
         }

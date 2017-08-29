@@ -49,6 +49,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>线性表.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>线索二叉树.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -95,6 +100,11 @@
 			<true/>
 		</dict>
 		<key>96A2BA061EC2E8C300AE0312</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>96E820B81F553AA70082CCBF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
