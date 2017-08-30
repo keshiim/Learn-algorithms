@@ -11,6 +11,7 @@
 		9610007A1EE80FE60026A30A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 961000791EE80FE60026A30A /* main.c */; };
 		961000851EE965C50026A30A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 961000841EE965C50026A30A /* main.c */; };
 		9610008A1EEA5E960026A30A /* KMP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 961000891EEA5E960026A30A /* KMP.cpp */; };
+		9615C3FA1F56BD2E008F8CBB /* LinkList.c in Sources */ = {isa = PBXBuildFile; fileRef = 9615C3F81F56BD2E008F8CBB /* LinkList.c */; };
 		961A03C01F0200A400482DF4 /* QuickSort.c in Sources */ = {isa = PBXBuildFile; fileRef = 961A03BF1F0200A400482DF4 /* QuickSort.c */; };
 		96412C861EFBBAE0002DF237 /* 散列表查找.c in Sources */ = {isa = PBXBuildFile; fileRef = 96412C841EFBBAE0002DF237 /* 散列表查找.c */; };
 		9667952B1EF79A790031DAE9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9667952A1EF79A790031DAE9 /* main.c */; };
@@ -127,6 +128,9 @@
 		961000821EE965C50026A30A /* 图 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "图"; sourceTree = BUILT_PRODUCTS_DIR; };
 		961000841EE965C50026A30A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		961000891EEA5E960026A30A /* KMP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KMP.cpp; path = ../KMP.cpp; sourceTree = "<group>"; };
+		9615C3F81F56BD2E008F8CBB /* LinkList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LinkList.c; sourceTree = "<group>"; };
+		9615C3F91F56BD2E008F8CBB /* LinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkList.h; sourceTree = "<group>"; };
+		9615C3FC1F56C909008F8CBB /* ListDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListDefine.h; sourceTree = "<group>"; };
 		961A03BF1F0200A400482DF4 /* QuickSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = QuickSort.c; sourceTree = "<group>"; };
 		96412C841EFBBAE0002DF237 /* 散列表查找.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "散列表查找.c"; sourceTree = "<group>"; };
 		96412C851EFBBAE0002DF237 /* 散列表查找.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "散列表查找.h"; sourceTree = "<group>"; };
@@ -351,8 +355,11 @@
 			children = (
 				96E820BB1F553AA70082CCBF /* main.c */,
 				96E820C01F553AD20082CCBF /* ListHeader.h */,
+				9615C3FC1F56C909008F8CBB /* ListDefine.h */,
 				96E820C11F553B0D0082CCBF /* SequenceList.c */,
 				96E820C21F553B0D0082CCBF /* SequenceList.h */,
+				9615C3F81F56BD2E008F8CBB /* LinkList.c */,
+				9615C3F91F56BD2E008F8CBB /* LinkList.h */,
 			);
 			path = "线性表";
 			sourceTree = "<group>";
@@ -680,6 +687,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96E820C31F553B0D0082CCBF /* SequenceList.c in Sources */,
+				9615C3FA1F56BD2E008F8CBB /* LinkList.c in Sources */,
 				96E820BC1F553AA70082CCBF /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1027,6 +1035,7 @@
 				96E820BE1F553AA70082CCBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96EB87561EFCBC5700C6C3A6 /* Build configuration list for PBXNativeTarget "排序" */ = {
 			isa = XCConfigurationList;

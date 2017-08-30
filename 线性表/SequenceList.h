@@ -8,18 +8,9 @@
 
 #ifndef SequenceList_h
 #define SequenceList_h
-
 #include <stdio.h>
+#include "ListDefine.h"
 
-// 存储看空间初始分配量 (顺序链表)
-#define MAXSIZE 20
-#define OK 1
-#define ERROR 0
-#define TRUE 1
-#define FALSE 0
-typedef int Status;
-
-typedef int ElemType;
 typedef struct {
     //数组存储元素，最大值MAXSIZE
     ElemType data[MAXSIZE];
