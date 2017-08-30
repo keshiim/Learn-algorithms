@@ -22,6 +22,6 @@
     GetElem(L, i, *e) 在线性表L中查的第i个位置元素返回给e。
     LocateElem(L, e） 在线性表L中查找与给定值e相等的元素，如果查找成功，返回改元素在表中序号表示成功。
  */
-
+#include "SequenceList.h"
 
 #endif /* ListHeader_h */
