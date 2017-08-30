@@ -46,7 +46,7 @@ Status ListDelete(SqList *L, int i, ElemType *e) {
         return ERROR;
     }
     // 当i不在范围内时
-    if (i < 1 || i > L->length + 1) {
+    if (i < 1 || i > L->length) {
         return ERROR;
     }
     
