@@ -7,12 +7,46 @@
 //
 
 #include "SequenceList.h"
+#include <stdlib.h>
+
+Status InitList(SqList **L) {
+    *L = (SqList *)malloc(sizeof(SqList));
+    (*L)->length = 0;
+    return OK;
+}
+
+Status ListEmpty(SqList L) {
+    return L.length == 0 ? TRUE : FALSE;
+}
+
+Status ClearList(SqList *L) {
+    L->length = 0;
+    return OK;
+}
+
+Status LocateElem(SqList L, int *i, ElemType e) {
+    for (int j = 0; j < L.length; j++) {
+        if (L.data[j] == e) {
+            *i = j + 1;
+            return OK;
+        }
+    }
+    return ERROR;
+}
 
 Status GetElem(SqList L, int i, ElemType *e) {
     if (L.length == 0 || i < 1 || i > L.length) {
         return ERROR;
     }
     *e = L.data[i - 1];
+    return OK;
+}
+
+Status SetElem(SqList L, int i, ElemType e) {
+    if (L.length == 0 || i < 1 || i > L.length) {
+        return ERROR;
+    }
+    L.data[i - 1] = e;
     return OK;
 }
 

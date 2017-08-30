@@ -14,7 +14,8 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
     
-    SqList *L = (SqList *)malloc(sizeof(SqList));
+    SqList *L = NULL;
+    InitList(&L);
     for (int i = 0; i < 10; i++) {
         L->data[i] = arc4random() % 30;
         L->length = i + 1;

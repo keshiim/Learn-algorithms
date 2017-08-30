@@ -27,10 +27,16 @@ typedef struct {
 } SqList;
 
 /* ----Operation:----- */
+Status InitList(SqList **L);
+Status ListEmpty(SqList L);
+Status ClearList(SqList *L);
+Status LocateElem(SqList L, int *i, ElemType e);
 // Status是函数的类型，其值是函数结果状态代码，如OK等
 // 初始条件：循序线性表L已经存在，1<=i<=ListLength(L)
 // 操作结果：用e返回L中第i个数据元素的值
 Status GetElem(SqList L, int i, ElemType *e);
+
+Status SetElem(SqList L, int i, ElemType e);
 
 // 初始条件：顺序线性表L已存在，1<=i<=ListLength(L)
 // 操作结果：在L中第i个位置之前插入新的数据元素e，L的长度加1
