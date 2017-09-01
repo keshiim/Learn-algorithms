@@ -25,5 +25,15 @@ int main(int argc, const char * argv[]) {
     ListDelete(L, 8, &elem);
     printf("%d\n", elem);
     
+    LinkList p;
+    
+    CreateListHead(&p, 10);
+    CreateListTail(&p, 10);
+    for (int i = 1; i <= 10; i++) {
+        ElemType e;
+        GetElem_LL(p, i, &e);
+        printf("%d\n", e);
+    }
+    ClearList_LL(&p);
     return 0;
 }

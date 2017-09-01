@@ -80,8 +80,8 @@ void CreateListHead(LinkList *L, int n) {
         InitNode_LL(&p);
         p->data = arc4random() % 100 + 1;
         p->next = (*L)->next;
-        //头插发
-        (*L)->next = p->next;
+        //头插法
+        (*L)->next = p;
         
         i++;
     }
@@ -110,7 +110,7 @@ void CreateListTail(LinkList *L, int n) {
 }
 
 //时间复杂度O(n)
-Status ClearList(LinkList *L) {
+Status ClearList_LL(LinkList *L) {
     LinkList p, q;
     p = (*L)->next;
     while (p) {
@@ -119,6 +119,8 @@ Status ClearList(LinkList *L) {
         free(p);
         p = q;
     }
+    //头结点指针域置空
+    (*L)->next = NULL;
     return OK;
 }
 
