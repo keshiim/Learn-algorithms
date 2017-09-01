@@ -28,4 +28,12 @@ Status GetElem_LL(LinkList L, int i, ElemType *e);
 
 Status ListInsert_LL(LinkList *L, int i, ElemType e);
 
+Status ListDelete_LL(LinkList *L, int i, ElemType *e);
+
+void CreateListHead(LinkList *L, int n); // 头插法
+
+void CreateListTail(LinkList *L, int n); // 尾插法
+
+// 重置为空表
+Status ClearList(LinkList *L);
 #endif /* LinkList_h */
