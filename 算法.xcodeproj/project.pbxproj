@@ -29,6 +29,7 @@
 		96A0A3CE1F00F013007B33E5 /* MergingSort.c in Sources */ = {isa = PBXBuildFile; fileRef = 96A0A3CD1F00F013007B33E5 /* MergingSort.c */; };
 		96A2B9FD1EC2E88600AE0312 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2B9FC1EC2E88600AE0312 /* main.m */; };
 		96A2BA0A1EC2E8C300AE0312 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 96A2BA091EC2E8C300AE0312 /* main.c */; };
+		96CF1CA31F59764500A74C89 /* StaticLinkList.c in Sources */ = {isa = PBXBuildFile; fileRef = 96CF1CA11F59764500A74C89 /* StaticLinkList.c */; };
 		96E820BC1F553AA70082CCBF /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 96E820BB1F553AA70082CCBF /* main.c */; };
 		96E820C31F553B0D0082CCBF /* SequenceList.c in Sources */ = {isa = PBXBuildFile; fileRef = 96E820C11F553B0D0082CCBF /* SequenceList.c */; };
 		96EB87531EFCBC5700C6C3A6 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 96EB87521EFCBC5700C6C3A6 /* main.c */; };
@@ -160,6 +161,8 @@
 		96A2B9FC1EC2E88600AE0312 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96A2BA071EC2E8C300AE0312 /* MaximumSubarray */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MaximumSubarray; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A2BA091EC2E8C300AE0312 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		96CF1CA11F59764500A74C89 /* StaticLinkList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = StaticLinkList.c; sourceTree = "<group>"; };
+		96CF1CA21F59764500A74C89 /* StaticLinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticLinkList.h; sourceTree = "<group>"; };
 		96E820B91F553AA70082CCBF /* 线性表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "线性表"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E820BB1F553AA70082CCBF /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		96E820C01F553AD20082CCBF /* ListHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListHeader.h; sourceTree = "<group>"; };
@@ -360,6 +363,8 @@
 				96E820C21F553B0D0082CCBF /* SequenceList.h */,
 				9615C3F81F56BD2E008F8CBB /* LinkList.c */,
 				9615C3F91F56BD2E008F8CBB /* LinkList.h */,
+				96CF1CA11F59764500A74C89 /* StaticLinkList.c */,
+				96CF1CA21F59764500A74C89 /* StaticLinkList.h */,
 			);
 			path = "线性表";
 			sourceTree = "<group>";
@@ -689,6 +694,7 @@
 				96E820C31F553B0D0082CCBF /* SequenceList.c in Sources */,
 				9615C3FA1F56BD2E008F8CBB /* LinkList.c in Sources */,
 				96E820BC1F553AA70082CCBF /* main.c in Sources */,
+				96CF1CA31F59764500A74C89 /* StaticLinkList.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
