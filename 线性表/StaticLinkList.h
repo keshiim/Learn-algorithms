@@ -30,11 +30,19 @@ Status InitList_SLL(StaticLinkList space);
 
 //分配一个空间空间，返回空闲下标，如果备用链表为空则返回0
 int Malloc_SLL(StaticLinkList space);
+//删除一个结点
+void Free_SSL(StaticLinkList space, int i);
 
 //静态链表的长度
 int ListLength_SSL(StaticLinkList L);
 
 //在链表中第i个元素之前插入e
 Status ListInsert_SSL(StaticLinkList L, int i, ElemType e);
+
+//在链表中删除第i位置的结点
+Status ListDelete_SSL(StaticLinkList L, int i);
+
+//打印
+int ListTraverse(StaticLinkList L);
 
 #endif /* StaticLinkList_h */

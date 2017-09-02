@@ -23,7 +23,9 @@
     LocateElem(L, e） 在线性表L中查找与给定值e相等的元素，如果查找成功，返回改元素在表中序号表示成功。
  */
 
-#include "SequenceList.h" //顺序列表
-#include "LinkList.h"     //链式列表
+#include "SequenceList.h" //顺序链表
+#include "LinkList.h"     //链式链表
+#include "StaticLinkList.h" //静态链表
+
 
 #endif /* ListHeader_h */

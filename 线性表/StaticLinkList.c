@@ -18,7 +18,9 @@ Status InitList_SLL(StaticLinkList space) {
     return OK;
 }
 
-
+/*
+   Malloc 和 Free 主要是修改备用链表
+ */
 int Malloc_SLL(StaticLinkList space) {
     //获取静态链表下一个备用链表的第一个元素下标
     int i = space[0].cur;
@@ -27,6 +29,13 @@ int Malloc_SLL(StaticLinkList space) {
         space[0].cur = space[i].cur;
     }
     return i;
+}
+
+void Free_SSL(StaticLinkList space, int i) {
+    //把备用链表cur赋给要删除的元素
+    space[i].cur = space[0].cur;
+    //把要删除元素的小标还给备用链表，并作为备用链表的第一位置
+    space[0].cur = i;
 }
 
 int ListLength_SSL(StaticLinkList L) {
@@ -59,3 +68,38 @@ Status ListInsert_SSL(StaticLinkList L, int i, ElemType e) {
     }
     return ERROR;
 }
+
+Status ListDelete_SSL(StaticLinkList L, int i) {
+    int k, j;
+    //首先将k指向头结点，即：下标为MAXSIZE_STATIC - 1的位置
+    k = MAXSIZE_STATIC - 1; //999
+    if (i < 1 || i > ListLength_SSL(L)) {
+        return ERROR;
+    }
+    
+    //找到i之前的下标位置
+    for (j = 1; j <= i - 1; j++) {
+        k = L[k].cur;
+    }
+    j = L[k].cur;
+    L[k].cur = L[j].cur;
+    Free_SSL(L, j);
+    return OK;
+}
+
+int ListTraverse(StaticLinkList L) {
+    int i = L[MAXSIZE_STATIC - 1].cur;
+    while (i) {
+        printf("%c ", L[i].data);
+        i = L[i].cur;
+    }
+    printf("\n");
+    return ListLength_SSL(L);
+}
+
+
+
+
+
+
+
