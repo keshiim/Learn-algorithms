@@ -99,7 +99,90 @@ Status ListDelete(SqList *L, int i, ElemType *e) {
 
 
 
+Status _init(SqList **L) {
+    (*L) = (SqList *)malloc(sizeof(SqList));
+    (*L)->length = 0;
+    return OK;
+}
 
+Status _LocationElem(SqList L, int *lo, ElemType e) {
+    for (int i = 0; i < L.length; i++) {
+        if (L.data[i] == e) {
+            *lo = i + 1;
+            return OK;
+        }
+    }
+    return ERROR;
+}
+
+Status _getElem(SqList L, int lo, ElemType *E) {
+    if (lo < 1 || lo > L.length) {
+        return ERROR;
+    }
+    *E = L.data[lo - 1];
+    return OK;
+}
+
+Status _setElem(SqList *L, int lo, ElemType e) {
+    if (lo < 1 || lo > (*L).length) {
+        return ERROR;
+    }
+    (*L).data[lo - 1] = e;
+    return OK;
+}
+
+Status _insertList(SqList *L, int lo, ElemType e) {
+    if ((*L).length == MAXSIZE) {
+        return ERROR;
+    }
+    
+    if (lo < 1 || lo > (*L).length + 1) {
+        return ERROR;
+    }
+    
+    if (lo <= (*L).length) {
+        for (int k = (*L).length - 1; k >= lo - 1; k++) {
+            (*L).data[k + 1] = (*L).data[k];
+        }
+    }
+    (*L).data[lo - 1] = e;
+    (*L).length++;
+    return OK;
+}
+
+Status _deleteList(SqList *L, int lo, ElemType *e) {
+    if (L->length == 0) {
+        return ERROR;
+    }
+    
+    if (lo < 1 || lo > L->length) {
+        return ERROR;
+    }
+    
+    *e = L->data[lo - 1];
+    if (lo < L->length) {
+        for (int k = lo; k < L->length; k++) {
+            L->data[k - 1] = L->data[k];
+        }
+    }
+    L->length--;
+    return OK;
+}
+
+Status _unionL(SqList *AL, SqList BL) {
+    int a_len = AL->length;
+    int b_len = BL.length;
+    
+    ElemType e;
+    for (int i = 1; i <= b_len; i++) {
+        _getElem(BL, i, &e);
+        int loc;
+        if (_LocationElem(*AL, &loc, e) == ERROR) {
+            _insertList(AL, ++a_len, e);
+        }
+    }
+    return OK;
+}
 
 
 
