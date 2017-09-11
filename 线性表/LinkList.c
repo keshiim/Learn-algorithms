@@ -57,7 +57,7 @@ Status ListDelete_LL(LinkList *L, int i, ElemType *e) {
         p = p->next;
         k++;
     }
-    if (!p || k > i) {
+    if (!(p->next) || k > i) {
         return ERROR;
     }
     cur = p->next;
