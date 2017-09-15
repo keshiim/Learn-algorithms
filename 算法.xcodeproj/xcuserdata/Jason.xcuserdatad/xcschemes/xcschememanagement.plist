@@ -42,6 +42,11 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>栈和队列.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>算法.xcscheme</key>
 		<dict>
 			<key>isShown</key>
