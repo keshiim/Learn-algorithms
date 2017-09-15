@@ -98,7 +98,83 @@ int ListTraverse(StaticLinkList L) {
 }
 
 
+Status __InitList_SLL(StaticLinkList space) {
+    for (int i = 0; i < MAXSIZE_STATIC - 1; i++) {
+        space[i].cur = i + 1;
+    }
+    space[MAXSIZE_STATIC - 1].cur = 0;
+    return OK;
+}
+//分配一个空间空间，返回空闲下标，如果备用链表为空则返回0
+int __Malloc_SLL(StaticLinkList space) {
+    int i = space[0].cur;
+    if (space[0].cur) {
+        space[0].cur = space[i].cur;
+    }
+    return i;
+}
 
+//删除一个结点
+void __Free_SSL(StaticLinkList space, int i) {
+    space[i].cur = space[0].cur;
+    space[0].cur = i;
+}
+
+//静态链表的长度
+int __ListLength_SSL(StaticLinkList L) {
+    int j = 0;
+    int i = L[MAXSIZE_STATIC].cur;
+    while (i) {
+        j++;
+        i = L[i].cur;
+    }
+    return j;
+}
+
+//在链表中第i个元素之前插入e
+Status __ListInsert_SSL(StaticLinkList L, int i, ElemType e) {
+    if (i < 0 || i > __ListLength_SSL(L) + 1) {
+        return ERROR;
+    }
+    int j = __Malloc_SLL(L); // 获取下一个要插入空分量下标
+    int k = MAXSIZE_STATIC - 1;
+    if (j) {
+        L[j].data = e;
+        for (int l = 1; l <= i - 1; l++) { //查找第i-1个元素的下标
+            k = L[k].cur;
+        }
+        L[j].cur = L[k].cur;
+        L[k].cur = j;
+        return OK;
+    }
+    return ERROR;
+}
+
+//在链表中删除第i位置的结点
+Status __ListDelete_SSL(StaticLinkList L, int i) {
+    if (i < 0 || i > __ListLength_SSL(L)) {
+        return ERROR;
+    }
+    int k = MAXSIZE_STATIC - 1, j; //初始头结点的位置
+    for (j = 1; j <= i - 1; j++) {//循环查找第i-1个元素的下标
+        k = L[k].cur;
+    }
+    j = L[k].cur;
+    L[k].cur = L[j].cur;
+    __Free_SSL(L, j);
+    return OK;
+}
+
+//打印
+int __ListTraverse(StaticLinkList L) {
+    int i = L[MAXSIZE_STATIC - 1].cur;
+    while (i) {
+        printf("%d ", L[i].data);
+        i = L[i].cur;
+    }
+    printf("\n");
+    return __ListLength_SSL(L);
+}
 
 
 

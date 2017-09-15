@@ -125,8 +125,98 @@ Status ClearList_LL(LinkList *L) {
 }
 
 
+//以下是练习
+Status __InitNode_LL(LinkList *node) {
+    *node = (LinkList)malloc(sizeof(Node));
+    return OK;
+}
 
+Status __GetElem_LL(LinkList L, int i, ElemType *e) {
+    LinkList p = L->next;
+    int j = 1;
+    while (p && j < i) {
+        p = p->next;
+        j++;
+    }
+    if (!p || j > i) {
+        return ERROR;
+    }
+    *e = p->data;
+    return OK;
+}
 
+Status __ListInsert_LL(LinkList *L, int i, ElemType e) {
+    LinkList p = *L;
+    int j = 1;
+    //find i-1 elem
+    while (p && j < i) {
+        p = p->next;
+        j++;
+    }
+    if (!p || j > i) {
+        return ERROR;
+    }
+    LinkList w = (LinkList)malloc(sizeof(Node));
+    w->data = e;
+    w->next = p->next;
+    p->next = w;
+    return OK;
+}
 
+Status __ListDelete_LL(LinkList *L, int i, ElemType *e) {
+    LinkList p = *L, q;
+    int j = 1;
+    while (p && j < i) {
+        p = p->next;
+        j++;
+    }
+    if (!p || j > i) {
+        return ERROR;
+    }
+    q = p->next;
+    p->next = q->next;
+    *e = q->data;
+    free(q);
+    return OK;
+}
+
+void __CreateListHead(LinkList *L, int n) {// 头插法
+    LinkList p = (LinkList)malloc(sizeof(Node));
+    p->next = NULL;
+    *L = p;
+    int j = 0;
+    while (j < n) {
+        p = (LinkList)malloc(sizeof(Node));
+        p->data = arc4random() % 100;
+        p->next = (*L)->next;
+        (*L)->next = p;
+    }
+}
+
+void __CreateListTail(LinkList *L, int n) { // 尾插法
+    LinkList p = (LinkList)malloc(sizeof(Node)), r;
+    p->next = NULL;
+    (*L) = p;
+    r = p;
+    int j = 0;
+    while (j < n) {
+        p = (LinkList)malloc(sizeof(Node));
+        p->data = arc4random() % 100;
+        r->next = p;
+        r = p;
+    }
+}
+
+Status __ClearList_LL(LinkList *L) {// 重置为空表
+    LinkList p, q;
+    p = (*L)->next;
+    while (p) {
+        q = p->next;
+        free(p);
+        p = q;
+    }
+    (*L)->next = NULL;
+    return OK;
+}
 
 
