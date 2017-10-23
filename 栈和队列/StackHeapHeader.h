@@ -9,6 +9,8 @@
 #ifndef StackHeapHeader_h
 #define StackHeapHeader_h
 
+#include "SequenceStack.h"
+#include "SqDoubleStack.h"
 
 #endif /* StackHeapHeader_h */
 

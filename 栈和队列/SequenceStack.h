@@ -19,7 +19,7 @@ typedef struct {
 
 Status visit(SElemType c);
 Status InitStack(SqStack *S);
-Status clearStack(SqStack *S);
+Status ClearStack(SqStack *S);
 Status StackEmpty(SqStack S);
 int StackLength(SqStack S);
 Status GetTop(SqStack S, SElemType *e);

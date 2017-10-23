@@ -18,9 +18,16 @@ typedef struct {
     int top2; //栈2栈顶指针
 } SqDoubleStack;
 
-//插入元素e为新的栈顶元素
-Status Push(SqDoubleStack *S, SElemType e, int stackNumber);
+Status D_visit(SElemType c);
+Status D_InitStack(SqDoubleStack *S);
+Status D_ClearStack(SqDoubleStack *S);
+Status D_StackEmpty(SqDoubleStack S);
+int D_StackLength(SqDoubleStack S);
+Status D_StackTraverse(SqDoubleStack S);
 
-Status Pop(SqDoubleStack *S, SElemType *e, int stackNumber);
+//插入元素e为新的栈顶元素
+Status D_Push(SqDoubleStack *S, SElemType e, int stackNumber);
+
+Status D_Pop(SqDoubleStack *S, SElemType *e, int stackNumber);
 
 #endif /* DoubleStack_h */

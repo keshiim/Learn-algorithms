@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		960592441F6BAE93000E96F6 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 960592431F6BAE93000E96F6 /* main.c */; };
 		9605924B1F6BB383000E96F6 /* SequenceStack.c in Sources */ = {isa = PBXBuildFile; fileRef = 960592491F6BB383000E96F6 /* SequenceStack.c */; };
-		9605924F1F6BD9D5000E96F6 /* SqDoubleStack.c in Sources */ = {isa = PBXBuildFile; fileRef = 9605924D1F6BD9D5000E96F6 /* SqDoubleStack.c */; };
+		960592521F6BE4A4000E96F6 /* SqDoubleStack.c in Sources */ = {isa = PBXBuildFile; fileRef = 960592511F6BE4A4000E96F6 /* SqDoubleStack.c */; };
 		9610006F1EE807A30026A30A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9610006E1EE807A30026A30A /* main.c */; };
 		9610007A1EE80FE60026A30A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 961000791EE80FE60026A30A /* main.c */; };
 		961000851EE965C50026A30A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 961000841EE965C50026A30A /* main.c */; };
@@ -140,8 +140,8 @@
 		960592491F6BB383000E96F6 /* SequenceStack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SequenceStack.c; sourceTree = "<group>"; };
 		9605924A1F6BB383000E96F6 /* SequenceStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SequenceStack.h; sourceTree = "<group>"; };
 		9605924C1F6BB3B9000E96F6 /* ADTDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADTDefine.h; sourceTree = "<group>"; };
-		9605924D1F6BD9D5000E96F6 /* SqDoubleStack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SqDoubleStack.c; sourceTree = "<group>"; };
-		9605924E1F6BD9D5000E96F6 /* SqDoubleStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SqDoubleStack.h; sourceTree = "<group>"; };
+		960592501F6BE4A4000E96F6 /* SqDoubleStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqDoubleStack.h; sourceTree = "<group>"; };
+		960592511F6BE4A4000E96F6 /* SqDoubleStack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SqDoubleStack.c; sourceTree = "<group>"; };
 		9610006C1EE807A30026A30A /* 二叉树 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "二叉树"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9610006E1EE807A30026A30A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		961000771EE80FE60026A30A /* 线索二叉树 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "线索二叉树"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -276,8 +276,8 @@
 				9605924C1F6BB3B9000E96F6 /* ADTDefine.h */,
 				960592491F6BB383000E96F6 /* SequenceStack.c */,
 				9605924A1F6BB383000E96F6 /* SequenceStack.h */,
-				9605924D1F6BD9D5000E96F6 /* SqDoubleStack.c */,
-				9605924E1F6BD9D5000E96F6 /* SqDoubleStack.h */,
+				960592511F6BE4A4000E96F6 /* SqDoubleStack.c */,
+				960592501F6BE4A4000E96F6 /* SqDoubleStack.h */,
 			);
 			path = "栈和队列";
 			sourceTree = "<group>";
@@ -607,7 +607,7 @@
 		96A2B9F11EC2E88600AE0312 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Jason;
 				TargetAttributes = {
 					960592401F6BAE93000E96F6 = {
@@ -693,8 +693,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				960592521F6BE4A4000E96F6 /* SqDoubleStack.c in Sources */,
 				960592441F6BAE93000E96F6 /* main.c in Sources */,
-				9605924F1F6BD9D5000E96F6 /* SqDoubleStack.c in Sources */,
 				9605924B1F6BB383000E96F6 /* SequenceStack.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -926,7 +926,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -934,7 +936,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -974,7 +980,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -982,7 +990,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

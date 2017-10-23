@@ -18,33 +18,33 @@ Status InitStack(SqStack *S) {
     return OK;
 }
 
-Status clearStack(SqStack *S) {
+Status ClearStack(SqStack *S) {
     S->top = -1;
     return OK;
 }
 
 Status StackEmpty(SqStack S) {
-    if (S->top == -1) {
+    if (S.top == -1) {
         return TRUE;
     }
     return FALSE;
 }
 
 int StackLength(SqStack S) {
-    return S->top + 1;
+    return S.top + 1;
 }
 
 Status GetTop(SqStack S, SElemType *e) {
-    if (S->top == -1) {
+    if (S.top == -1) {
         return ERROR;
     }
-    *e = S->data[S->top];
+    *e = S.data[S.top];
     return OK;
 }
 
 Status StackTraverse(SqStack S) {
-    for (int i = 0; i <= S->top; i++) {
-        visit(S->data[i]);
+    for (int i = 0; i <= S.top; i++) {
+        visit(S.data[i]);
     }
     printf("\n");
     return OK;
